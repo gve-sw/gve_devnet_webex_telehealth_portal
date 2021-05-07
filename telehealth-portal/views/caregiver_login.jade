@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title Cisco Webex Telehealth Portal
+    link(rel='stylesheet', href='/stylesheets/caregiver.css')
+    link(href="/stylesheets/cui-standard.min.css", rel="stylesheet", type="text/css")
+    block header
+  body
+    script(src='/javascripts/jquery.min.js')
+    .login
+    form(id="loginform", method="POST", action="/caregiver/login")
+      input(type="text", name="username", placeholder="Username", required)
+      input(type="password", name="password", placeholder="Password", required)
+      p #{err}
+      input(type="submit", value="Login")

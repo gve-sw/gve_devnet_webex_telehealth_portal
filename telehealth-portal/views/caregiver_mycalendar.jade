@@ -1,0 +1,21 @@
+extends caregiver_layout
+
+block header
+
+block headerbar
+  img(src='/media/header_bar_mycalendar.png')
+
+block content
+  h3 MY CALENDAR
+  .patientgrid
+    for consultation, c in consultations
+      .patientbox
+        span= consultation.name
+        span= consultation.medical_id
+        - var datetime = new Date(parseInt(consultation.consultation.date_time)).toLocaleDateString() + ' ' + new Date(parseInt(consultation.consultation.date_time)).toLocaleTimeString()
+        - if(((parseInt(consultation.consultation.date_time) - Date.now())/1000)/60 < 5 && ((parseInt(consultation.consultation.date_time) - Date.now())/1000)/60 > -5){
+          a(href='/caregiver/outpatient/#{consultation.uuid}')
+            button Start Now
+        - }else{
+          span= datetime
+        - }

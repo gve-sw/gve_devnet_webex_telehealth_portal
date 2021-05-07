@@ -1,0 +1,24 @@
+extends patient_layout
+
+block content
+  script(src='https://unpkg.com/webex@^1/umd/webex.min.js')
+  script(type='text/javascript').
+    var access_token = "#{access_token}";
+    var uuid = "#{uuid}";
+    var name = "#{name}";
+  script(src='/javascripts/patient_main.js')
+  audio(id='sound', src='/media/sound.wav' loop)
+  h1.heading= name
+  img#icon(src='/media/avatar.png')
+  hr
+  .guest
+    button(id='guestroombtn', onclick='guestVisit()') Guest Room
+  .notification.hidden
+    h1.heading#caller
+    h1 requests to have a consultation
+    .accept(onclick='accept()')
+      img(src='/media/accept.png')
+    .deny(onclick='deny()')
+      img(src='/media/deny.png')
+  .enableAudio
+    button(id='playbtn', onclick='testSound()') Enable Notification

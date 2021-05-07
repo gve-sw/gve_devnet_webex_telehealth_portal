@@ -1,0 +1,20 @@
+extends caregiver_layout
+
+block header
+  link(rel='stylesheet', href='https://code.s4d.io/widget-space/production/main.css')
+
+block headerbar
+  img(src='/media/header_bar_meet.png')
+
+block content
+  script(src='https://code.s4d.io/widget-space/production/bundle.js')
+  script(type='text/javascript').
+    var access_token = "#{access_token}";
+    var destination_id = "#{patient.webex_guest.guestUser.id}";
+    var destination_type = "#{destination_type}";
+  script(src='/javascripts/meet.js')
+  .meetdetails
+    span= patient.name
+    span= patient.location
+    span= patient.medical_id
+  #webex

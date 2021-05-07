@@ -1,0 +1,15 @@
+extends caregiver_layout
+
+block headerbar
+  img(src='/media/header_bar_inpatient.png')
+
+block content
+    h3 PATIENT LIST
+    .patientgrid
+      for patient, p in patients
+        .patientbox
+          form(method='GET', action=`/caregiver/meet/${patient.uuid}`)
+            span= patient.name
+            span= patient.location
+            span= patient.medical_id
+            button(type='submit') Meet

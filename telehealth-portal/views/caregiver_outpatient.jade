@@ -1,0 +1,23 @@
+extends caregiver_layout
+
+block header
+
+block headerbar
+  img(src='/media/header_bar_outpatient.png')
+
+block content
+  script(src="/javascripts/outpatient.js")
+  h3 SCHEDULE A CONSULTATION
+  form#outpatientform(method='POST', action='/caregiver/outpatient')
+    .inputform
+      p Patient
+      input#patient(type='text', name='patient' required)
+    .inputform
+      p Consultation Date & Time
+      input#datetimepicker(type='datetime-local', name='date_time' required)
+    input(type='submit', value='Schedule')
+  .outpatientgrid.hidden
+    for patient, p in patients
+      .outpatientbox(data-name=patient.name, data-medical_id=patient.medical_id, onclick='selectPatient(this)')
+        span= patient.name
+        span= patient.medical_id

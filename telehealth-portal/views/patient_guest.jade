@@ -1,0 +1,28 @@
+extends patient_layout
+
+block content
+  script(src='/javascripts/patient_guest.js')
+  h1.heading Guest List
+  h1(style='white-space:pre;')
+    | Please add your guests' phone number or email address.
+    | Check the box for those who you want to invite in this visit.
+  button#addguestbtn(onclick='addGuest()') Add
+  form#guestform(method='POST', action='/patient/#{uuid}/guest')
+    table(id='guestlist')
+      tr
+        th Invite?
+        th Guest
+        th Contact
+      for guest, g in guests
+        tr
+          td
+            input(type='checkbox', onclick='toggleGuest(this)', value=guest.contact)
+          td
+            span= guest.name
+          td
+            span= guest.contact
+    input#extra.hidden(type='text', name='extra', value='0')
+    input#old.hidden(type='text', name='old', value='')
+    input#newname.hidden(type='text', name='newname', value='')
+    input#newcontact.hidden(type='text', name='newcontact', value='')
+    input#invitebtn(type='submit', value='Send Invite')

@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title Cisco Webex Telehealth Portal
+    link(rel='stylesheet', href='/stylesheets/caregiver.css')
+    block header
+  body
+    script(src='/javascripts/jquery.min.js')
+    .header
+      block headerbar
+      a(href='/caregiver/inpatient')
+        .inpatient
+      a(href='/caregiver/outpatient')
+        .outpatient
+      a(href='/caregiver/mycalendar')
+        .mycalendar
+      .logout
+        a(href="/caregiver/logout")
+          img(src='/media/logout.png')
+    .container
+      block content

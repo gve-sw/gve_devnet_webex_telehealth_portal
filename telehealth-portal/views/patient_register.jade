@@ -1,0 +1,9 @@
+extends patient_layout
+
+block content
+  form(id="registerform", method="POST", action="/patient/register")
+    h1.heading Registration to Telehealth Portal
+    input(type="text", name="patient_name", placeholder="Patient Name" required)
+    input(type="text", name="medical_id", placeholder="Medical ID" required)
+    p.invalid= err
+    input(type="submit", value="Register")

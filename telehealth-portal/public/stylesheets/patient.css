@@ -1,0 +1,243 @@
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('/fonts/ProximaNova-Regular.otf');
+}
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('/fonts/HelveticaNeue Thin.ttf');
+}
+
+.hidden{
+  display: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: 'HelveticaNeue'
+}
+
+h1{
+  margin: 0;
+}
+
+.header{
+  height: 213px;
+}
+
+.header img{
+  width: 100%;
+  max-width: 100%;
+}
+
+#icon{
+  width: 100%;
+}
+
+.container{
+  width: 100%;
+  height: 87%;
+  text-align: center;
+  overflow: scroll;
+}
+
+#registerform{
+  text-align: center;
+  padding-top: 50px;
+}
+
+#registerform > input[type=text]{
+  font-size: 56px;
+  display: block;
+  width: 700px;
+  margin-top: 50px;
+  border: none;
+  border-bottom: 2px solid #E9E9F0;
+  -webkit-appearance: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#registerform > input[type=submit]{
+  width: 500px;
+  height: 150px;
+  background-color: #F8B060;
+  font-size: 64px;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  -webkit-appearance: none;
+  margin-top: 100px;
+}
+
+.heading{
+  margin: 0;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  font-family: 'ProximaNova';
+  color: #646D82;
+  font-size: 84px;
+}
+
+.invalid{
+  color: red;
+  padding-top: 100px;
+  font-family: 'HelveticaNeue';
+  font-size: 28px;
+}
+
+.enableAudio{
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#playbtn{
+  width: 700px;
+  height: 150px;
+  background-color: #F8B060;
+  font-size: 64px;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  -webkit-appearance: none;
+}
+
+.notification{
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  height: 87%;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  z-index: 99;
+  text-align: center;
+}
+
+.accept{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: auto;
+}
+
+.deny{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: auto;
+}
+
+.notification img{
+  width: 100%;
+  height: auto
+}
+
+.meetdetails{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  background-color: #FCECDB;
+  border-radius: 20px;
+  height: 30px;
+  z-index: 99;
+}
+
+.meetdetails span{
+  font-family: 'HelveticaNeue';
+  font-size: 15px;
+  color: #707070;
+  margin: 0 15px 0 15px;
+}
+
+#webex{
+  width: 100%;
+  height: 100%;
+}
+
+hr{
+  width: 80%;
+  margin: 150px auto 150px auto;
+  border: 2px solid #D8D6D6;
+}
+
+.guest{
+  width: 70%;
+  margin: 0 auto 0 auto;
+}
+
+#guestroombtn{
+  width: auto;
+  height: 100px;
+  background-color: #F8B060;
+  font-size: 48px;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  -webkit-appearance: none;
+}
+
+#addguestbtn{
+  width: 100px;
+  height: 50px;
+  background-color: #F8B060;
+  font-size: 28px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  -webkit-appearance: none;
+  margin: 50px 0 0 70%;
+}
+
+#invitebtn{
+  width: auto;
+  height: 50px;
+  background-color: #F8B060;
+  font-size: 28px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  -webkit-appearance: none;
+  margin: 100px 0 100px 0;
+}
+
+#guestlist{
+  margin: 50px auto 0 auto;
+  font-size: 36px;
+}
+
+#guestlist th{
+  text-decoration: underline;
+  padding: 0 50px 0 50px;
+}
+
+#guestlist td{
+  padding: 50px 50px 0 50px;
+}
+
+#guestlist input[type=checkbox]{
+  width: 30px;
+  height: 30px;
+}
+
+#guestlist input[type=text]{
+  font-size: 36px;
+  max-width: 250px;
+}

@@ -1,0 +1,28 @@
+{
+  "name": "Webex-Telehealth-Portal",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "author": "Alvin Lau <alvlau@cisco.com>",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
+    "express": "~4.16.1",
+    "express-session": "^1.17.1",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "jquery-datetimepicker": "^2.5.21",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.10.6",
+    "morgan": "~1.9.1",
+    "nodemailer": "^6.4.13",
+    "request": "^2.88.2",
+    "twilio": "^3.49.4",
+    "uuid": "^8.3.0",
+    "webex": "^1.96.1"
+  }
+}
